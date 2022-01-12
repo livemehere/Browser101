@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            /* overflow: hidden; */
+            
+        }
+        .boxes{
+            display:inline-block;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(255, 208, 122);
+            margin: 5px;
+            border-radius: 5px;
+            display: grid;
+            place-items: center;
+            color: white;
+            font-size: 2rem;
+        }
+        .active{
+            background-color: salmon;
+        }
+        .buttons{
+            position:fixed;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="buttons">
+        <button data-num=1>scroll by 100px(y)</button>
+        <button data-num=2>scroll to 100px(y)</button>
+        <button data-num=3>scroll into active</button>
+    </div>
+    <div class="boxes">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+        <div class="box">11</div>
+        <div class="box">12</div>
+        <div class="box">13</div>
+        <div class="box">14</div>
+        <div class="box">15</div>
+        <div class="box active">16</div>
+        <div class="box">17</div>
+        <div class="box">18</div>
+        <div class="box">19</div>
+        <div class="box">20</div>
+    </div>
+    <script>
+        document.querySelector('.boxes').addEventListener('click',(e)=>{
+            console.log(e.target.getBoundingClientRect());
+            console.log(`client: ${e.clientX}, ${e.clientY}`)
+            console.log(`page: ${e.pageX}, ${e.pageY}`)
+            
+        })
+
+        document.querySelector('.buttons').addEventListener('click',(e)=>{
+            switch(e.target.dataset.num){
+                case "1":
+                    window.scrollBy(0,100);
+                    break;
+                case "2":
+                    window.scrollTo(0,100);
+                    break;
+                case "3":
+                    // way 1
+                    // let targetY = document.querySelector('.active').getBoundingClientRect().top
+                    // window.scrollTo(0,targetY)
+
+                    // way 2
+                    let active = document.querySelector('.active');
+                    active.scrollIntoView();
+                    break;
+            }
+        })
+
+        // <script defer/> this first
+        
+        // only document
+        window.addEventListener('DOMContentLoaded',()=>{})
+        // after resurces (css,images)
+        window.addEventListener('load',()=>{})
+        // before unload
+        window.addEventListener('beforeunload',()=>{})
+        // resource is being unloaded
+        window.addEventListener('unload',()=>{})
+
+
+    </script>
+</body>
+</html>
