@@ -1,0 +1,108 @@
+:root {
+  --color-high: #16334a;
+  --color-middle: #16334a;
+  --color-soft: #204158;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, #00989b 0.1%, #005e78 94.2%);
+  background-color: #0a253e;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.container {
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  background-color: #f3f3f3;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
+.container button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.container header {
+  display: inline-block;
+  width: 100%;
+  margin-top: 40px;
+  border-radius: 10px 10px 0 0;
+}
+
+.container ul {
+  list-style-type: none;
+  padding: 0;
+  height: 40vh;
+  overflow: scroll;
+}
+
+.container ul .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 30px;
+}
+
+.container ul .item .text {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.container ul .item button:hover {
+  color: red;
+}
+
+.container ul li {
+  margin-top: 13px;
+}
+
+.container ul .divider {
+  width: 90%;
+  height: 1px;
+  background-color: dimgray;
+  margin: 0 auto;
+}
+
+.container footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 30px;
+  padding-bottom: 1rem;
+}
+
+.container footer input {
+  width: 100%;
+  border: 2px solid dimgray;
+  border-radius: 5px;
+  padding: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+}
+
+.container footer button i {
+  color: #4e6e85;
+}
+/*# sourceMappingURL=todolist.css.map */
