@@ -7,6 +7,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   background-image: radial-gradient(
@@ -50,7 +51,7 @@ body {
     list-style-type: none;
     padding: 0;
     height: 40vh;
-    overflow: scroll;
+    overflow-y: scroll;
     .item {
       display: flex;
       justify-content: space-between;
@@ -77,6 +78,9 @@ body {
       height: 1px;
       background-color: rgb(105, 105, 105);
       margin: 0 auto;
+    }
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 

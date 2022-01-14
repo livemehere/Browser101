@@ -52,7 +52,7 @@ body {
   list-style-type: none;
   padding: 0;
   height: 40vh;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .container ul .item {
@@ -83,6 +83,10 @@ body {
   height: 1px;
   background-color: dimgray;
   margin: 0 auto;
+}
+
+.container ul::-webkit-scrollbar {
+  display: none;
 }
 
 .container footer {

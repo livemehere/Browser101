@@ -37,6 +37,10 @@ class Item {
   remove() {
     this.context.removeChild(this.li);
   }
+
+  print() {
+    console.log("hi");
+  }
 }
 
 const addBtn = document.querySelector(".add-btn");
@@ -57,4 +61,6 @@ function createNewTodo() {
   const text = inputText.value;
   const li = new Item(text, todoList);
   inputText.value = "";
+
+  li.scrollIntoView();
 }
